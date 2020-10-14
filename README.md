@@ -3,7 +3,7 @@
 ### Tech Stack
 For the frontend of the DieGrammatikMacher product i made the decision to use following tech stack: 
 - Next.js (React Framework): 
-  - Next.js allows server side rendering, server side generation, preview modes of pages and client side rendering out of the box. You can make a decision per page where and when it should be build. When using SSG (Server Side Generation), the pages are build during build time of the app. When triggering SSR, the pages are build during every request. 
+  - Next.js allows server side rendering, server side generation, preview modes of pages and client side rendering out of the box. You can make a decision per page where and when it should be build. When using SSG (Server Side Generation), the pages are build during build time of the app. When triggering SSR, the pages are build during every request. In this example, the main page could be completely rendered during build time, which could then lead to super fast page loadings on client side
   - Furthermore the framework provides an extensible node based api layer out of the box. Meaning, you can define your api proxy layer within the application itself. Each defined API can be deployed serverless as needed. For this application it can be usefull, if different APIs or backends have to be accessed. Then we could use the API routes as aggregation layer. 
 - Material UI as React UI framework due to its easy integration and great look and feel out of the box
 
@@ -17,9 +17,17 @@ For the frontend of the DieGrammatikMacher product i made the decision to use fo
   - with proper time i would also add utils and lib folders for common functions. Also services should be defined in an own folder structure
   - Testing was complete disregarded. Nevertheless, a testing library as e.g. Jest should be included in the proper version
   
-- 
+- For state mgmt i made use of react hooks. Nevertheless, proper state mgmt. like redux could be implemented in a proper version
+- Proper error handling would have to be implemented.
 
-  
+### Functionality
+- Features implemented: 
+  - User can start & stop the recording of the Audio (after he gave permission to access the mic)
+  - The replay of the spoken audio was not finished, dummy function is implemented 
+  - Email and the audio file are getting send to the api layer checkGrammar via post request.
+  - Dummy response is received
+
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
