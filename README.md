@@ -12,7 +12,7 @@ For the frontend of the DieGrammatikMacher product i made the decision to use fo
   - Pages: all pages for the apps can be found within the pages folder. In this case i have just implemented one page as requested. For each further page it could be defined how the page should be rendered. This page could be completely rendered on build time.
   - Container: i have created one container which aggregates all components needed for this application. It defines the structure between the components
   - Components: i have created different components for the email input, the audio recording section and the different types of buttons
-  - api folder: here i created one simple api point which receives the recorded data from the user. This data point could be extended to a proper api layer which distributes the data to the different endpoints (e.g. machine learning services which could process the recorded audio files)
+  - api folder: here i created one simple api point which receives the recorded data from the user. This api point could be extended to a proper api layer which distributes the data to the different endpoints (e.g. machine learning services which could process the recorded audio files)
   - src: here the theme for the application can be found. the template was just modified in terms of background color and primary + secondary colors
   - with proper time i would also add utils and lib folders for common functions. Also services should be defined in an own folder structure
   - Testing was complete disregarded. Nevertheless, a testing library as e.g. Jest should be included in the proper version
