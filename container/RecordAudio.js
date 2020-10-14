@@ -14,11 +14,13 @@ const RecordAudio = (props) => {
   const [recordedAudio, setRecordedAudio] = useState(null);
   const classes = useStyles();
 
+  //send audio file and email to api layer
   const submitAudio = async (event) => {
     event.preventDefault();
 
     const response = await axios.post("/api/checkGrammar", {
       audio: recordedAudio,
+      email: email,
     });
     if (response.status === 200) {
       console.log("we checked your grammar ");

@@ -9,6 +9,7 @@ const AudioSection = (props) => {
   const [micAccessApproval, steMicAccessApproval] = useState(false);
   const classes = useStyles();
 
+  //handling recording the audio
   const onRecordButtonClick = () => {
     console.log("in navigator mediadevices");
     navigator.mediaDevices
@@ -20,7 +21,7 @@ const AudioSection = (props) => {
         console.log(err);
       });
   };
-
+  //stop recording the audio
   const onStopRecordButtonClick = () => {
     recordedAudio.getTracks().forEach((track) => {
       track.stop();
@@ -56,6 +57,7 @@ const AudioSection = (props) => {
   );
 };
 
+//add some styling to buttons
 const useStyles = makeStyles((theme) => ({
   button: {
     marginTop: theme.spacing(1),
